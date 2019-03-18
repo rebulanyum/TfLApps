@@ -191,7 +191,7 @@ path = path.Replace("{" + "height" + "}", ApiClient.ParameterToString(height));
  if (compareValue != null) queryParams.Add("compareValue", ApiClient.ParameterToString(compareValue)); // query parameter
                                         
             // authentication setting, if any
-            String[] authSettings = new String[] {  };
+            String[] authSettings = new String[] { "app_key", "app_id" };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, authSettings);
@@ -283,7 +283,7 @@ path = path.Replace("{" + "height" + "}", ApiClient.ParameterToString(height));
  if (travelTimeInterval != null) queryParams.Add("travelTimeInterval", ApiClient.ParameterToString(travelTimeInterval)); // query parameter
                                         
             // authentication setting, if any
-            String[] authSettings = new String[] {  };
+            String[] authSettings = new String[] { "app_key", "app_id" };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, authSettings);

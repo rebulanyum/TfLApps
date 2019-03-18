@@ -176,7 +176,7 @@ path = path.Replace("{" + "to" + "}", ApiClient.ParameterToString(to));
  if (taxiOnlyTrip != null) queryParams.Add("taxiOnlyTrip", ApiClient.ParameterToString(taxiOnlyTrip)); // query parameter
                                         
             // authentication setting, if any
-            String[] authSettings = new String[] {  };
+            String[] authSettings = new String[] { "app_key", "app_id" };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, authSettings);
@@ -208,7 +208,7 @@ path = path.Replace("{" + "to" + "}", ApiClient.ParameterToString(to));
     
                                                     
             // authentication setting, if any
-            String[] authSettings = new String[] {  };
+            String[] authSettings = new String[] { "app_key", "app_id" };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, authSettings);

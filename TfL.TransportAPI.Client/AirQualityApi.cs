@@ -90,7 +90,7 @@ namespace TfL.TransportAPI.Client
     
                                                     
             // authentication setting, if any
-            String[] authSettings = new String[] {  };
+            String[] authSettings = new String[] { "app_key", "app_id" };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, authSettings);

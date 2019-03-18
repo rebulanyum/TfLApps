@@ -256,7 +256,7 @@ namespace TfL.TransportAPI.Client
     
                                                     
             // authentication setting, if any
-            String[] authSettings = new String[] {  };
+            String[] authSettings = new String[] { "app_key", "app_id" };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, authSettings);
@@ -303,7 +303,7 @@ path = path.Replace("{" + "line" + "}", ApiClient.ParameterToString(line));
              if (direction != null) queryParams.Add("direction", ApiClient.ParameterToString(direction)); // query parameter
                                         
             // authentication setting, if any
-            String[] authSettings = new String[] {  };
+            String[] authSettings = new String[] { "app_key", "app_id" };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, authSettings);
@@ -347,7 +347,7 @@ path = path.Replace("{" + "toStopPointId" + "}", ApiClient.ParameterToString(toS
              if (lineId != null) queryParams.Add("lineId", ApiClient.ParameterToString(lineId)); // query parameter
                                         
             // authentication setting, if any
-            String[] authSettings = new String[] {  };
+            String[] authSettings = new String[] { "app_key", "app_id" };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, authSettings);
@@ -390,7 +390,7 @@ path = path.Replace("{" + "toStopPointId" + "}", ApiClient.ParameterToString(toS
  if (flattenResponse != null) queryParams.Add("flattenResponse", ApiClient.ParameterToString(flattenResponse)); // query parameter
                                         
             // authentication setting, if any
-            String[] authSettings = new String[] {  };
+            String[] authSettings = new String[] { "app_key", "app_id" };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, authSettings);
@@ -429,7 +429,7 @@ path = path.Replace("{" + "toStopPointId" + "}", ApiClient.ParameterToString(toS
              if (includeRouteBlockedStops != null) queryParams.Add("includeRouteBlockedStops", ApiClient.ParameterToString(includeRouteBlockedStops)); // query parameter
                                         
             // authentication setting, if any
-            String[] authSettings = new String[] {  };
+            String[] authSettings = new String[] { "app_key", "app_id" };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, authSettings);
@@ -468,7 +468,7 @@ path = path.Replace("{" + "toStopPointId" + "}", ApiClient.ParameterToString(toS
              if (includeCrowdingData != null) queryParams.Add("includeCrowdingData", ApiClient.ParameterToString(includeCrowdingData)); // query parameter
                                         
             // authentication setting, if any
-            String[] authSettings = new String[] {  };
+            String[] authSettings = new String[] { "app_key", "app_id" };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, authSettings);
@@ -525,7 +525,7 @@ path = path.Replace("{" + "toStopPointId" + "}", ApiClient.ParameterToString(toS
  if (locationLon != null) queryParams.Add("location.lon", ApiClient.ParameterToString(locationLon)); // query parameter
                                         
             // authentication setting, if any
-            String[] authSettings = new String[] {  };
+            String[] authSettings = new String[] { "app_key", "app_id" };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, authSettings);
@@ -564,7 +564,7 @@ path = path.Replace("{" + "toStopPointId" + "}", ApiClient.ParameterToString(toS
              if (page != null) queryParams.Add("page", ApiClient.ParameterToString(page)); // query parameter
                                         
             // authentication setting, if any
-            String[] authSettings = new String[] {  };
+            String[] authSettings = new String[] { "app_key", "app_id" };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, authSettings);
@@ -603,7 +603,7 @@ path = path.Replace("{" + "toStopPointId" + "}", ApiClient.ParameterToString(toS
              if (output != null) queryParams.Add("output", ApiClient.ParameterToString(output)); // query parameter
                                         
             // authentication setting, if any
-            String[] authSettings = new String[] {  };
+            String[] authSettings = new String[] { "app_key", "app_id" };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, authSettings);
@@ -640,7 +640,7 @@ path = path.Replace("{" + "toStopPointId" + "}", ApiClient.ParameterToString(toS
     
                                                     
             // authentication setting, if any
-            String[] authSettings = new String[] {  };
+            String[] authSettings = new String[] { "app_key", "app_id" };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, authSettings);
@@ -682,7 +682,7 @@ path = path.Replace("{" + "page" + "}", ApiClient.ParameterToString(page));
     
                                                     
             // authentication setting, if any
-            String[] authSettings = new String[] {  };
+            String[] authSettings = new String[] { "app_key", "app_id" };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, authSettings);
@@ -719,7 +719,7 @@ path = path.Replace("{" + "page" + "}", ApiClient.ParameterToString(page));
     
                                                     
             // authentication setting, if any
-            String[] authSettings = new String[] {  };
+            String[] authSettings = new String[] { "app_key", "app_id" };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, authSettings);
@@ -760,7 +760,7 @@ path = path.Replace("{" + "page" + "}", ApiClient.ParameterToString(page));
  if (modes != null) queryParams.Add("modes", ApiClient.ParameterToString(modes)); // query parameter
                                         
             // authentication setting, if any
-            String[] authSettings = new String[] {  };
+            String[] authSettings = new String[] { "app_key", "app_id" };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, authSettings);
@@ -797,7 +797,7 @@ path = path.Replace("{" + "page" + "}", ApiClient.ParameterToString(page));
     
                                                     
             // authentication setting, if any
-            String[] authSettings = new String[] {  };
+            String[] authSettings = new String[] { "app_key", "app_id" };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, authSettings);
@@ -839,7 +839,7 @@ path = path.Replace("{" + "page" + "}", ApiClient.ParameterToString(page));
              if (placeTypes != null) queryParams.Add("placeTypes", ApiClient.ParameterToString(placeTypes)); // query parameter
                                         
             // authentication setting, if any
-            String[] authSettings = new String[] {  };
+            String[] authSettings = new String[] { "app_key", "app_id" };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, authSettings);
@@ -871,7 +871,7 @@ path = path.Replace("{" + "page" + "}", ApiClient.ParameterToString(page));
     
                                                     
             // authentication setting, if any
-            String[] authSettings = new String[] {  };
+            String[] authSettings = new String[] { "app_key", "app_id" };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, authSettings);
@@ -903,7 +903,7 @@ path = path.Replace("{" + "page" + "}", ApiClient.ParameterToString(page));
     
                                                     
             // authentication setting, if any
-            String[] authSettings = new String[] {  };
+            String[] authSettings = new String[] { "app_key", "app_id" };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, authSettings);
@@ -935,7 +935,7 @@ path = path.Replace("{" + "page" + "}", ApiClient.ParameterToString(page));
     
                                                     
             // authentication setting, if any
-            String[] authSettings = new String[] {  };
+            String[] authSettings = new String[] { "app_key", "app_id" };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, authSettings);
@@ -979,7 +979,7 @@ path = path.Replace("{" + "lineId" + "}", ApiClient.ParameterToString(lineId));
              if (serviceTypes != null) queryParams.Add("serviceTypes", ApiClient.ParameterToString(serviceTypes)); // query parameter
                                         
             // authentication setting, if any
-            String[] authSettings = new String[] {  };
+            String[] authSettings = new String[] { "app_key", "app_id" };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, authSettings);
@@ -1018,7 +1018,7 @@ path = path.Replace("{" + "lineId" + "}", ApiClient.ParameterToString(lineId));
              if (serviceTypes != null) queryParams.Add("serviceTypes", ApiClient.ParameterToString(serviceTypes)); // query parameter
                                         
             // authentication setting, if any
-            String[] authSettings = new String[] {  };
+            String[] authSettings = new String[] { "app_key", "app_id" };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, authSettings);
@@ -1067,7 +1067,7 @@ path = path.Replace("{" + "lineId" + "}", ApiClient.ParameterToString(lineId));
  if (tflOperatedNationalRailStationsOnly != null) queryParams.Add("tflOperatedNationalRailStationsOnly", ApiClient.ParameterToString(tflOperatedNationalRailStationsOnly)); // query parameter
                                         
             // authentication setting, if any
-            String[] authSettings = new String[] {  };
+            String[] authSettings = new String[] { "app_key", "app_id" };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, authSettings);
@@ -1116,7 +1116,7 @@ path = path.Replace("{" + "lineId" + "}", ApiClient.ParameterToString(lineId));
  if (tflOperatedNationalRailStationsOnly != null) queryParams.Add("tflOperatedNationalRailStationsOnly", ApiClient.ParameterToString(tflOperatedNationalRailStationsOnly)); // query parameter
                                         
             // authentication setting, if any
-            String[] authSettings = new String[] {  };
+            String[] authSettings = new String[] { "app_key", "app_id" };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, authSettings);

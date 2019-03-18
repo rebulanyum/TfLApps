@@ -27,6 +27,10 @@ namespace TfLApps.RoadStatus
 
             serviceCollection.AddScoped<Application>();
             serviceCollection.AddScoped<IRoadApi, RoadApi>();
+            serviceCollection.AddScoped<ApiClient>(sp => {
+                var config = Scope.ServiceProvider.GetService<IOptions<TfLConfig>>().Value.TransportAPI.Client;
+                return new ApiClient(config.Address);
+            });
             serviceCollection.Configure<TfLConfig>(configuration.GetSection("TfL"));
 
             Scope = serviceCollection.BuildServiceProvider().CreateScope();
@@ -37,11 +41,9 @@ namespace TfLApps.RoadStatus
         {
             using (Scope)
             {
-                var x = Scope.ServiceProvider.GetService<IOptions<TfLConfig>>();
                 var config = Scope.ServiceProvider.GetService<IOptions<TfLConfig>>().Value.TransportAPI.Client;
-                Configuration.ApiKey.Add("app_key", config.AppKey);
-                Configuration.ApiKey.Add("app_id", config.AppID);
-                Configuration.DefaultApiClient.BasePath = config.Address;
+                Configuration.ApiKey["app_key"] = config.AppKey;
+                Configuration.ApiKey["app_id"] = config.AppID;
 
                 var app = Scope.ServiceProvider.GetService<Application>();
                 app.Run(args);

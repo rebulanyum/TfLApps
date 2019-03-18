@@ -166,7 +166,7 @@ namespace TfL.TransportAPI.Client
              if (includeChildren != null) queryParams.Add("includeChildren", ApiClient.ParameterToString(includeChildren)); // query parameter
                                         
             // authentication setting, if any
-            String[] authSettings = new String[] { "app_key", "app_id" };
+            String[] authSettings = new String[] { "apiKey", "appId" };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, authSettings);
@@ -223,7 +223,7 @@ namespace TfL.TransportAPI.Client
  if (locationLon != null) queryParams.Add("location.lon", ApiClient.ParameterToString(locationLon)); // query parameter
                                         
             // authentication setting, if any
-            String[] authSettings = new String[] { "app_key", "app_id" };
+            String[] authSettings = new String[] { "apiKey", "appId" };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, authSettings);
@@ -283,7 +283,7 @@ namespace TfL.TransportAPI.Client
  if (bbBoxpointsNeLon != null) queryParams.Add("bbBoxpoints.neLon", ApiClient.ParameterToString(bbBoxpointsNeLon)); // query parameter
                                         
             // authentication setting, if any
-            String[] authSettings = new String[] { "app_key", "app_id" };
+            String[] authSettings = new String[] { "apiKey", "appId" };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, authSettings);
@@ -322,7 +322,7 @@ namespace TfL.TransportAPI.Client
              if (activeOnly != null) queryParams.Add("activeOnly", ApiClient.ParameterToString(activeOnly)); // query parameter
                                         
             // authentication setting, if any
-            String[] authSettings = new String[] { "app_key", "app_id" };
+            String[] authSettings = new String[] { "apiKey", "appId" };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, authSettings);
@@ -394,7 +394,7 @@ path = path.Replace("{" + "height" + "}", ApiClient.ParameterToString(height));
  if (locationLon != null) queryParams.Add("location.lon", ApiClient.ParameterToString(locationLon)); // query parameter
                                         
             // authentication setting, if any
-            String[] authSettings = new String[] { "app_key", "app_id" };
+            String[] authSettings = new String[] { "apiKey", "appId" };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, authSettings);
@@ -433,7 +433,7 @@ path = path.Replace("{" + "height" + "}", ApiClient.ParameterToString(height));
  if (postcodeInputPostcode != null) queryParams.Add("postcodeInput.postcode", ApiClient.ParameterToString(postcodeInputPostcode)); // query parameter
                                         
             // authentication setting, if any
-            String[] authSettings = new String[] { "app_key", "app_id" };
+            String[] authSettings = new String[] { "apiKey", "appId" };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, authSettings);
@@ -465,7 +465,7 @@ path = path.Replace("{" + "height" + "}", ApiClient.ParameterToString(height));
     
                                                     
             // authentication setting, if any
-            String[] authSettings = new String[] { "app_key", "app_id" };
+            String[] authSettings = new String[] { "apiKey", "appId" };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, authSettings);
@@ -497,7 +497,7 @@ path = path.Replace("{" + "height" + "}", ApiClient.ParameterToString(height));
     
                                                     
             // authentication setting, if any
-            String[] authSettings = new String[] { "app_key", "app_id" };
+            String[] authSettings = new String[] { "apiKey", "appId" };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, authSettings);
@@ -536,7 +536,7 @@ path = path.Replace("{" + "height" + "}", ApiClient.ParameterToString(height));
  if (types != null) queryParams.Add("types", ApiClient.ParameterToString(types)); // query parameter
                                         
             // authentication setting, if any
-            String[] authSettings = new String[] { "app_key", "app_id" };
+            String[] authSettings = new String[] { "apiKey", "appId" };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, authSettings);

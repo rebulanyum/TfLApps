@@ -148,7 +148,7 @@ namespace TfL.TransportAPI.Client
  if (endDate != null) queryParams.Add("endDate", ApiClient.ParameterToString(endDate)); // query parameter
                                         
             // authentication setting, if any
-            String[] authSettings = new String[] { "app_key", "app_id" };
+            String[] authSettings = new String[] { "apiKey", "appId" };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, authSettings);
@@ -193,7 +193,7 @@ namespace TfL.TransportAPI.Client
  if (closures != null) queryParams.Add("closures", ApiClient.ParameterToString(closures)); // query parameter
                                         
             // authentication setting, if any
-            String[] authSettings = new String[] { "app_key", "app_id" };
+            String[] authSettings = new String[] { "apiKey", "appId" };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, authSettings);
@@ -232,7 +232,7 @@ namespace TfL.TransportAPI.Client
              if (stripContent != null) queryParams.Add("stripContent", ApiClient.ParameterToString(stripContent)); // query parameter
                                         
             // authentication setting, if any
-            String[] authSettings = new String[] { "app_key", "app_id" };
+            String[] authSettings = new String[] { "apiKey", "appId" };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, authSettings);
@@ -264,7 +264,7 @@ namespace TfL.TransportAPI.Client
     
                                                     
             // authentication setting, if any
-            String[] authSettings = new String[] { "app_key", "app_id" };
+            String[] authSettings = new String[] { "apiKey", "appId" };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, authSettings);
@@ -301,7 +301,7 @@ namespace TfL.TransportAPI.Client
     
                                                     
             // authentication setting, if any
-            String[] authSettings = new String[] { "app_key", "app_id" };
+            String[] authSettings = new String[] { "apiKey", "appId" };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, authSettings);
@@ -333,7 +333,7 @@ namespace TfL.TransportAPI.Client
     
                                                     
             // authentication setting, if any
-            String[] authSettings = new String[] { "app_key", "app_id" };
+            String[] authSettings = new String[] { "apiKey", "appId" };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, authSettings);
@@ -365,7 +365,7 @@ namespace TfL.TransportAPI.Client
     
                                                     
             // authentication setting, if any
-            String[] authSettings = new String[] { "app_key", "app_id" };
+            String[] authSettings = new String[] { "apiKey", "appId" };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, authSettings);
@@ -406,7 +406,7 @@ namespace TfL.TransportAPI.Client
  if (dateRangeNullableEndDate != null) queryParams.Add("dateRangeNullable.endDate", ApiClient.ParameterToString(dateRangeNullableEndDate)); // query parameter
                                         
             // authentication setting, if any
-            String[] authSettings = new String[] { "app_key", "app_id" };
+            String[] authSettings = new String[] { "apiKey", "appId" };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, authSettings);

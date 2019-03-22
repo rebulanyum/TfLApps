@@ -49,10 +49,6 @@ namespace TfLApps.RoadStatus
 
                 return ApplicationState.UserError;
             }
-            catch (Exception exception)
-            {
-                throw exception;
-            }
         }
     }
 }

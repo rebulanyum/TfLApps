@@ -22,19 +22,21 @@ namespace TfLApps.RoadStatus
 
             IConfigurationRoot configuration = builder.Build();
 
-            var serviceCollection = new ServiceCollection();
-            serviceCollection.AddOptions();
+            var services = new ServiceCollection();
+            services.AddOptions();
 
-            serviceCollection.AddScoped<Application>();
-            serviceCollection.AddScoped<IRoadApi, RoadApi>();
-            serviceCollection.AddScoped<ApiClient>(sp => {
+            services.AddScoped<Application>();
+            services.AddScoped<ApiClient>(sp => {
                 var config = Scope.ServiceProvider.GetService<IOptions<TfLConfig>>().Value.TransportAPI.Client;
                 return new ApiClient(config.Address);
             });
-            serviceCollection.Configure<TfLConfig>(configuration.GetSection("TfL"));
+            services.Configure<TfLConfig>(configuration.GetSection("TfL"));
+            ApplicationConfigurator.Configure(services);
 
-            Scope = serviceCollection.BuildServiceProvider().CreateScope();
+            Scope = services.BuildServiceProvider().CreateScope();
         }
+
+
 
         /// <summary>Main method for the application.</summary>
         static int Main(string[] args)
@@ -44,11 +46,11 @@ namespace TfLApps.RoadStatus
                 var config = Scope.ServiceProvider.GetService<IOptions<TfLConfig>>().Value.TransportAPI.Client;
                 Configuration.ApiKey["app_key"] = config.AppKey;
                 Configuration.ApiKey["app_id"] = config.AppID;
-
-                var app = Scope.ServiceProvider.GetService<Application>();
+                
                 ApplicationState result;
                 try
                 {
+                    var app = Scope.ServiceProvider.GetService<Application>();
                     result = app.Run(args);
                 }
                 catch (Exception e)

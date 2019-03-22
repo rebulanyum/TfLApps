@@ -22,12 +22,13 @@ namespace TfLApps.RoadStatus
             RoadApi = roadApi;
         }
 
-        public void Run(string[] args)
+        public ApplicationState Run(string[] args)
         {
             if (args == null || args.Length != 1)
             {
                 Console.WriteLine("Please provide single Road ID.");
-                return;
+
+                return ApplicationState.UserError;
             }
 
             string roadID = args[0];
@@ -40,17 +41,16 @@ namespace TfLApps.RoadStatus
                 Console.WriteLine("\tRoad Status is {0}", road.StatusSeverity);
                 Console.WriteLine("\tRoad Status Description is {0}", road.StatusSeverityDescription);
 
-                Environment.ExitCode = 0;
+                return ApplicationState.Successful;
             }
             catch (ApiException apiException) when (apiException.ErrorCode == 404)
             {
                 Console.WriteLine("{0} is not a valid road", roadID);
 
-                Environment.ExitCode = -1;
+                return ApplicationState.UserError;
             }
             catch (Exception exception)
             {
-                Environment.ExitCode = -2;
                 throw exception;
             }
         }

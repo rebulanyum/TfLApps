@@ -37,7 +37,7 @@ namespace TfLApps.RoadStatus
         }
 
         /// <summary>Main method for the application.</summary>
-        static void Main(string[] args)
+        static int Main(string[] args)
         {
             using (Scope)
             {
@@ -46,7 +46,16 @@ namespace TfLApps.RoadStatus
                 Configuration.ApiKey["app_id"] = config.AppID;
 
                 var app = Scope.ServiceProvider.GetService<Application>();
-                app.Run(args);
+                ApplicationState result;
+                try
+                {
+                    result = app.Run(args);
+                }
+                catch (Exception e)
+                {
+                    result = ApplicationState.ApplicationError;
+                }
+                return (int)result;
             }
         }
     }
